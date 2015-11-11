@@ -1,0 +1,42 @@
+// import Bourbon
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+
+// import Bourbon Bitters
+@import "../../bower_components/bitters/app/assets/stylesheets/base";
+
+// import Bourbon Neat
+@import "../../bower_components/neat/app/assets/stylesheets/neat";
+
+// Base styles
+@import "partials/base";
+
+$blue: #4A90E2;
+
+body, html {
+	margin: 0;
+}
+
+.container {
+	@include outer-container();
+}
+
+.main-nav {
+	width: 100%;
+	height: rem(60);
+	padding-top: rem(15);
+	background-color: $blue;
+	.logo {
+		margin-top: rem(4);
+		float: left;
+	}
+	a {
+		color: #FFF;
+	}
+	ul {
+		float: right;
+	}
+	li {
+		float: left;
+		margin-left: rem(30);
+	}
+}
