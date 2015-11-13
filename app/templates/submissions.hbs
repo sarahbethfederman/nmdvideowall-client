@@ -1,8 +1,13 @@
 <main class="container">
 	<h1>Submissions</h1>
 	{{outlet}}
+	<button {{action 'toggleCreate'}}>Create New</button>
 	{{#each model as |submission|}}
 		<p>{{submission.title}}</p>
 		<p>{{submission.title}}</p>
 	{{/each}}
+
+	{{#if isCreating}}
+		{{#create-submission newSubmission=model createSubmission="createSubmission"}}{{/create-submission}}
+	{{/if}}
 </main>

@@ -1,0 +1,7 @@
+<form enctype="multipart/form-data">
+	{{input value=newSubmission.title type='text' name='title' placeholder='Submission Title'}}
+	{{input value=newSubmission.author type='text' name='author' placeholder='Author (ex: Adam Smith)'}}
+	{{textarea value=newSubmission.description name='description'}}
+	<label for="file">We accept JPGs, PNGs, and MP4s up to 30MB</label>
+	<button {{action 'createSubmission' newSubmission}}>Submit</button>
+</form>
