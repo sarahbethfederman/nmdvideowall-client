@@ -10,8 +10,17 @@ export default EmberUploader.FileField.extend({
       url: uploadUrl
     });
 
+    uploader.on('progress', function(e) {
+      // Handle progress changes
+      // Use `e.percent` to get percentage
+    });
+
+    uploader.on('didUpload', function(e) {
+      // Handle finished upload
+    });
+
     if (!Ember.isEmpty(files)) {
-      uploader.upload(files[0]);
+      var promise = uploader.upload(files[0]);
     }
   }
 });
