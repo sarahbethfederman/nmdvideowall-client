@@ -6,7 +6,12 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('submission');
+  this.route('submissions', function() {
+  	this.route('create');
+  });
+  this.route('submission', { path: '/submission/:submission_id'}, function() {
+  	this.route('edit');
+  });
 });
 
 export default Router;

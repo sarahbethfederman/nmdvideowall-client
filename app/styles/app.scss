@@ -20,6 +20,10 @@ body, html {
 	@include outer-container();
 }
 
+main {
+	margin-top: rem(60);	
+}
+
 .main-nav {
 	width: 100%;
 	height: rem(60);

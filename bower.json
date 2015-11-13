@@ -14,6 +14,7 @@
     "qunit": "~1.18.0",
     "bourbon": "~4.2.6",
     "neat": "~1.7.2",
-    "bitters": "~1.1.0"
+    "bitters": "~1.1.0",
+    "ember-uploader": "0.3.11"
   }
 }

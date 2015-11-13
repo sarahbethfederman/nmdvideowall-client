@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	model() {
-		return this.store.findAll('submission');
+	model(params) {
+    return this.store.findRecord('submission', params.submission_id);
 	}
 });
