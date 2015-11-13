@@ -1,0 +1,9 @@
+<main class="container">
+	<h1>Submissions</h1>
+	{{outlet}}
+	<ul>
+	{{#each model as |submission|}}
+		<li>{{submission.title}}</li>
+	{{/each}}
+	</ul>
+</main>
