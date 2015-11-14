@@ -7,13 +7,13 @@ export default Ember.Route.extend({
 	isCreating: false,
 	actions: {
 		createSubmission: function(model) {
-			// create the record
-			var submission = this.store.createRecord('submission', {
-				title: model.title,
-				author: model.author,
-				description: model.description
-			});
-			submission.save();
+			// // create the record
+			// var submission = this.store.createRecord('submission', {
+			// 	title: model.title,
+			// 	author: model.author,
+			// 	description: model.description
+			// });
+			// submission.save();
 		}
 	}
 });
