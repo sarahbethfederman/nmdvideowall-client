@@ -8,8 +8,8 @@
     "test": "tests"
   },
   "scripts": {
-    "build": "ember build",
-    "start": "ember server",
+    "build": "ember build --environment=production --output-path=../public",
+    "start": "ember server --proxy http://localhost:3000",
     "test": "ember test"
   },
   "repository": "",

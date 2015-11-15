@@ -22,7 +22,7 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember serve`
+* `npm start` starts ember server on 4200 and proxies requests to API server on port 3000 (API server must be running on 3000)
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Code Generators
@@ -36,12 +36,11 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Building
 
-* `ember build` (development)
-* `ember build --environment=production --output-path=../public` (production)
+* `npm build` builds into public folder on server
 
 ### Deploying
 
-(ASK JAY IDK)
+(ASK JAY IDK LOL)
 
 ## Further Reading / Useful Links
 
