@@ -16,5 +16,8 @@
     "neat": "~1.7.2",
     "bitters": "~1.1.0",
     "ember-uploader": "0.3.11"
+  },
+  "resolutions": {
+    "ember": ">= 1.10.0"
   }
 }
