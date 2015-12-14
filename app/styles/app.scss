@@ -14,14 +14,24 @@ $blue: #4A90E2;
 
 body, html {
 	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #F6F6F6;
 }
 
 .container {
 	@include outer-container();
+	@include clearfix();
 }
 
 main {
 	margin-top: rem(60);	
+}
+
+h1 {
+	font-size: rem(21);
 }
 
 .main-nav {
@@ -43,4 +53,57 @@ main {
 		float: left;
 		margin-left: rem(30);
 	}
+}
+
+.entry-table {
+	margin-top: rem(30);
+	@include span-columns(12);
+	&-item {
+		border: 1px solid #CCC;
+		border-top: 0;	
+		background-color: #FFF;
+		margin: 0;
+		width: 100%;	
+		padding: rem(20) rem(15);
+		@include clearfix();
+		&:first-child {
+			border-top: 1px solid #CCC;
+		}	
+	}
+	&__title {
+		@include span-columns(3);
+		margin: 0;
+	}
+	&__description {
+		@include span-columns(3);
+		margin: 0;
+		font-weight: normal;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	&__date {
+		@include span-columns(3);
+	}
+	&__actions {
+		@include span-columns(3);
+	}
+	p {
+		margin: 0;
+	}
+	button {
+		padding: rem(8);
+		font-size: rem(16);
+	}
+}
+
+#submission-form {
+	margin-top: rem(20);
+}
+
+.create {
+	float: right;
+}
+
+.main-title {
+	@include span-columns(8);
 }

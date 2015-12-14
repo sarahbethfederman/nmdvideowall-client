@@ -1,11 +1,26 @@
 <main class="container">
-	<h1>Submissions</h1>
+	<h1 class="main-title">Submissions</h1>
 	{{outlet}}
-	<button {{action 'toggleCreate'}}>Create New</button>
+	<button {{action 'toggleCreate'}} class="create">Create New</button>
+	<ul class="entry-table">
+		<li class="entry-table-item">
+			<h3 class="entry-table__title">Title</h3>
+			<h3 class="entry-table__title description">Description</h3>
+			<h3 class="entry-table__title">Date</h3>
+			<h3 class="entry-table__title">Actions</h3>
+		</li>
 	{{#each model as |submission|}}
-		<p>{{submission.title}}</p>
-		<p>{{submission.title}}</p>
+		<li class="entry-table-item">
+			<h3 class="entry-table__title">{{submission.title}}</h3>
+			<p class="entry-table__description">{{submission.description}}</p>
+			<p class="entry-table__date">{{submission.createdDate}}</p>  
+			<div class="entry-table__actions">
+				<button {{action 'toggleEdit'}}>Edit</button>
+				<button {{action 'delete'}}>Delete</button>
+			</div>
+		</li>
 	{{/each}}
+	</ul>
 
 	{{#if isCreating}}
 		{{#create-submission newSubmission=model createSubmission="createSubmission"}}{{/create-submission}}

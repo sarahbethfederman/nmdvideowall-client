@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('submission', { path: '/submission/:submission_id'}, function() {
   	this.route('edit');
   });
+  this.route('guidelines');
 });
 
 export default Router;

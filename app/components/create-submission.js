@@ -12,10 +12,9 @@ export default Ember.Component.extend({
       processData: false,
       contentType: false
     }).success(function(res) {
-      //success(res);
       console.log('submitted form');
+      model.reload();
     }).error(function(res) {
-      //success(res);
       console.log('error');
     });
 	},

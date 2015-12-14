@@ -36,7 +36,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Building
 
-* `npm build` builds into public folder on server
+* `npm run build` builds into public folder on server
 
 ### Deploying
 
